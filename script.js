@@ -19,21 +19,34 @@ function getCookie(name) {
     return "";
 }
 
-// Función para cambiar el idioma y guardar la preferencia en una cookie
+// Función para cambiar el idioma, el contenido y la imagen de la cookie
 function cambiarIdioma() {
     let idioma = document.getElementById("idioma").value;
     let titulo = document.getElementById("titulo");
+    let parrafo = document.getElementById("parrafo-intro");
+    let imagen = document.querySelector(".imagen-intro");
 
     // Cambiar el texto según el idioma seleccionado
     switch(idioma) {
         case "es":
             titulo.textContent = "Bienvenidos a la Presentación de Cookies";
+            parrafo.textContent = "Esta presentación trata sobre las cookies de los navegadores, que ayudan a recordar preferencias del usuario, como el idioma. ¡Elige tu idioma preferido a continuación!";
+            imagen.src = "img/argentina.jpg"; // Cambiar imagen de cookie a una relacionada con España
             break;
         case "en":
             titulo.textContent = "Welcome to the Cookie Presentation";
+            parrafo.textContent = "This presentation is about browser cookies, which help remember user preferences, such as language. Choose your preferred language below!";
+            imagen.src = "img/uk.jpg"; // Cambiar imagen de cookie a una relacionada con EE.UU.
             break;
         case "fr":
             titulo.textContent = "Bienvenue à la Présentation des Cookies";
+            parrafo.textContent = "Cette présentation concerne les cookies des navigateurs, qui aident à mémoriser les préférences de l'utilisateur, comme la langue. Choisissez votre langue préférée ci-dessous !";
+            imagen.src = "img/france.jpg"; // Cambiar imagen de cookie a una relacionada con Francia
+            break;
+        case "pt":
+            titulo.textContent = "Bem-vindo à Apresentação de Cookies";
+            parrafo.textContent = "Esta apresentação trata dos cookies dos navegadores, que ajudam a lembrar as preferências do usuário, como o idioma. Escolha seu idioma preferido abaixo!";
+            imagen.src = "img/brazil.jpg"; // Cambiar imagen de cookie a una relacionada con Brasil
             break;
     }
 
@@ -52,3 +65,4 @@ function cargarPreferenciaIdioma() {
 
 // Cargar la preferencia de idioma cuando se carga la página
 window.onload = cargarPreferenciaIdioma;
+

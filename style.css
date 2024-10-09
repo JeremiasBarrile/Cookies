@@ -1,10 +1,11 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f0f0f0; /* Fondo gris claro */
     margin: 0;
     padding: 0;
     text-align: center;
+    color: #333;
 }
 
 /* Encabezado */
@@ -14,26 +15,87 @@ header {
     padding: 20px;
 }
 
-/* Título */
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Sección principal */
+main {
+    margin: 20px auto;
+    width: 80%;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#intro {
+    margin-top: 20px;
+}
+
+.imagen-intro {
+    width: 350px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-image 0.3s ease-in-out;
+}
+
+.imagen-intro:hover {
+    transform: scale(1.05);
+}
+
+#seleccion-idioma {
+    margin: 40px 0;
+}
+
+label, select {
+    font-size: 1.5em;
 }
 
 /* Pie de página */
 footer {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 20px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagen-footer {
+    width: 30px;
+    margin-left: 10px;
 }
 
 /* Selector de idioma */
-main {
-    margin-top: 50px;
+select {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #333;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
 }
 
-label, select {
-    font-size: 1.2em;
+select:hover {
+    background-color: #ddd;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .imagen-intro {
+        width: 100%;
+    }
+
+    main {
+        width: 95%;
+    }
 }

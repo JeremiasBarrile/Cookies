@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación de Cookies</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fuente Roboto Slab desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1 id="titulo">Bienvenidos a la Presentación de Cookies</h1>
     </header>
-    
+
     <main>
-        <label for="idioma">Seleccione su idioma: </label>
-        <select id="idioma" onchange="cambiarIdioma()">
-            <option value="es" selected>Español</option>
-            <option value="en">Inglés</option>
-            <option value="fr">Francés</option>
-        </select>
+        <section id="intro">
+            <img src="img/cookie foto.jpeg " alt="Cookie del Navegador" class="imagen-intro">
+            <p id="parrafo-intro">Esta presentación trata sobre las cookies de los navegadores, que ayudan a recordar preferencias del usuario, como el idioma. ¡Elige tu idioma preferido a continuación!</p>
+        </section>
+
+        <section id="seleccion-idioma">
+            <label for="idioma">Seleccione su idioma: </label>
+            <select id="idioma" onchange="cambiarIdioma()">
+                <option value="es" selected>Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+                <option value="pt">Portugués</option> <!-- Nuevo idioma -->
+            </select>
+        </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2024 Presentación de Cookies</p>
+        <p>GERLO, BARRILE, ZALLIO</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
