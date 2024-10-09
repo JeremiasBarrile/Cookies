@@ -46,7 +46,7 @@ function cambiarIdioma() {
         case "pt":
             titulo.textContent = "Bem-vindo à Apresentação de Cookies";
             parrafo.textContent = "Esta apresentação trata dos cookies dos navegadores, que ajudam a lembrar as preferências do usuário, como o idioma. Escolha seu idioma preferido abaixo!";
-            imagen.src = "img/brazil.jpg"; // Cambiar imagen de cookie a una relacionada con Brasil
+            imagen.src = "img/matin.png"; // Cambiar imagen de cookie a una relacionada con Brasil
             break;
     }
 
